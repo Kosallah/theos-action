@@ -1,0 +1,9 @@
+Package: com.salah.sunprog
+Name: SunProgMod
+Depends: mobilesubstrate
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Custom Mod for eFootball by Mohammed Salah
+Maintainer: Mohammed Salah
+Author: Mohammed Salah
+Section: Tweaks
