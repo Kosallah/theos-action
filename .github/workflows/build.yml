@@ -1,15 +1,18 @@
 name: Build SunProg Dylib
 on: [push, pull_request, workflow_dispatch]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node
+
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24' # التحديث المطلوب لحل مشكلة الصورة 18
-      - name: Build Tweak
+          node-version: '24' # حل مشكلة الصورة 20
+
+      - name: Build with Theos
         uses: Randomblock1/theos-action@v1
         with:
-          theos-sdks: 'https://github.com/theos/sdks' # إضافة روابط الـ SDK
+          theos-sdks: 'https://github.com/theos/sdks'
