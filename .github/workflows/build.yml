@@ -5,8 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Set up Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
-      - uses: Randomblock1/theos-action@v1
+          node-version: '24' # التحديث المطلوب لحل مشكلة الصورة 18
+      - name: Build Tweak
+        uses: Randomblock1/theos-action@v1
+        with:
+          theos-sdks: 'https://github.com/theos/sdks' # إضافة روابط الـ SDK
